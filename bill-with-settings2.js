@@ -57,6 +57,7 @@ let billWithSettingsFunction = function(){
 
     return warningSetting;
    }
+
    let setCriticalLevel = function(criticalValue){
     criticalSetting = criticalValue;
  
@@ -66,6 +67,14 @@ let billWithSettingsFunction = function(){
  
      return criticalSetting;
     }
+    var theWarningLevel = function(){
+        return "warning"
+    }
+
+    var theCriticalLevel = function(){
+        return "critical"
+    }
+
  
 
 
@@ -86,5 +95,7 @@ return{
     upDateWarning ,
     setCriticalLevel,
     upDateCritical,
+    theWarningLevel,
+    theCriticalLevel,
 }
 };

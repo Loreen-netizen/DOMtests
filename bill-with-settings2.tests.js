@@ -87,19 +87,22 @@ it ("should be able to set critical level to R35 when critical level is set and 
         assert.equal(35, billWithSettings10.upDateCritical())
 });
 
+it ("should change class color to orange when warning level of R30 is reached", function(){
+    var  billWithSettings11 = billWithSettingsFunction();
+    billWithSettings11.theWarningLevel("warning");
+    assert.equal( "warning", billWithSettings11.theWarningLevel())
+});
+it ("should change class color to red when critical level of R50 is reached", function(){
 
-// it ("should show total cost in orange when total cost exceeds warning level", function(){
+    var  billWithSettings12 = billWithSettingsFunction();
+    billWithSettings12.theCriticalLevel("critical");
+    assert.equal( "critical", billWithSettings12.theCriticalLevel())
+});
+
+it ("should prevent any new costs from being added when total cost reaches critical level", function(){
 
 
-// });
-// it ("should show total cost in red when total cost exceeds critical level", function(){
-
-
-// });
-// it ("should prevent any new costs from being added when total cost reaches critical level", function(){
-
-
-// });
+});
 
 
 });
