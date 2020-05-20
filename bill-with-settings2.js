@@ -45,6 +45,11 @@ let billWithSettingsFunction = function(){
    
    let updateTotalCost = function(){
     return totalCallCost + totalSmsCost;
+   }
+
+   let stopSumming = function(){
+    if( updateTotalCost() > upDateCritical())
+    return setCriticalLevel();
     
    }
 
@@ -68,10 +73,12 @@ let billWithSettingsFunction = function(){
      return criticalSetting;
     }
     var theWarningLevel = function(){
+        if( updateTotalCost() >= upDateWarning() )
         return "warning"
     }
 
     var theCriticalLevel = function(){
+        if( updateTotalCost() >= upDateCritical() )
         return "critical"
     }
 
